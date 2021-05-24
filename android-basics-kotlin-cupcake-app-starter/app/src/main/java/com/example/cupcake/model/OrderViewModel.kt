@@ -23,6 +23,9 @@ class OrderViewModel : ViewModel() {
         _quantity.value=numbersCupcake
 
     }
+    fun hasNoFlavorSet(): Boolean {
+        return _flavor.value.isNullOrEmpty()
+    }
     fun setFlavor(desiredFlavor:String) {
         _flavor.value=desiredFlavor
     }
