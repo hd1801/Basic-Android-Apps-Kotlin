@@ -12,9 +12,6 @@ import java.util.Calendar
 private const val PRICE_PER_CUPCAKE = 2.00
 private const val PRICE_FOR_SAME_DAY_PICKUP = 3.00
 class OrderViewModel : ViewModel() {
-    init{
-        resetOrder()
-    }
 
     private val _quantity = MutableLiveData(0)
     val quantity: LiveData<Int> = _quantity
@@ -30,6 +27,10 @@ class OrderViewModel : ViewModel() {
         NumberFormat.getCurrencyInstance().format(it)
     }
     val dateOptions = getPickupOptions()
+
+    init{
+        resetOrder()
+    }
 
     //setters for above properties
     fun setQuantity(numbersCupcake :Int) {
