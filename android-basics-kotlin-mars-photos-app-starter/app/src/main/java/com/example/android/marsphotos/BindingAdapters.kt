@@ -3,7 +3,10 @@ package com.example.android.marsphotos
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.core.net.toUri
+import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.android.marsphotos.network.MarsPhoto
+import com.example.android.marsphotos.overview.PhotoGridAdapter
 
 
 @BindingAdapter("imageUrl")
