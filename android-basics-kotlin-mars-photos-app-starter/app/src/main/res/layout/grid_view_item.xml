@@ -21,8 +21,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
-            name="viewModel"
-            type="com.example.android.marsphotos.overview.OverviewViewModel" />
+            name="photo"
+            type="com.example.android.marsphotos.network.MarsPhoto" />
     </data>
     <ImageView
         android:id="@+id/mars_image"
@@ -30,7 +30,7 @@
         android:layout_height="170dp"
         android:scaleType="fitXY"
         android:adjustViewBounds="true"
-        android:padding="2dp"
-        app:imageUrl="@{viewModel.photos.imgSrcUrl}"
+        android:padding="4dp"
+        app:imageUrl="@{photo.imgSrcUrl}"
         tools:src="@tools:sample/backgrounds/scenic"/>
 </layout>

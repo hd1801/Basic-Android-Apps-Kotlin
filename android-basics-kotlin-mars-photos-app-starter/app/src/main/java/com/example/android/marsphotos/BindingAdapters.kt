@@ -14,5 +14,12 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
             placeholder(R.drawable.loading_animation)
             error(R.drawable.ic_broken_image)
     }
+        @BindingAdapter("listData")
+        fun bindRecyclerView(recyclerView: RecyclerView,
+                             data: List<MarsPhoto>?) {
+            val adapter = recyclerView.adapter as PhotoGridAdapter
+            adapter.submitList(data)
+
+        }
 }
 }
